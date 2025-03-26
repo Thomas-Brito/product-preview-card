@@ -1,0 +1,123 @@
+:root {
+  /* Cores primárias */
+  --verde-500: hsl(158, 36%, 37%);
+  --verde-700: hsl(158, 42%, 18%);
+
+  /* Cores neutras */
+  --branco: hsl(0, 0%, 100%);
+  --cinza: hsl(228, 12%, 48%);
+  --creme: hsl(30, 38%, 92%);
+  --preto: hsl(212, 21%, 14%);
+
+  /*Fontes*/
+  --fonte-1: 500 0.875rem/150% "Montserrat";
+  --fonte-2: 700 2rem/100% "Fraunces";
+  --fonte-3: 700 1rem/150% "Montserrat";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  align-items: center;
+  background-color: var(--creme);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.fonte-1 { font: var(--fonte-1); }
+.fonte-2 { font: var(--fonte-2); }
+.fonte-3 { font: var(--fonte-3); }
+
+.cor-cinza { color: var(--cinza); }
+.cor-preta { color: var(--preta); }
+.cor-verde { color: var(--verde-500); }
+.fundo-branco { background-color: var(--branco) }
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  width: clamp(21.4375rem, 90vw, 37.5rem);
+}
+
+.imagem, .conteudo {
+  height: 28.125rem;
+  max-width: 18.75rem;
+}
+
+img {
+  border-radius: 0.5rem 0 0 0.5rem;
+  max-width: 100%;
+}
+
+.conteudo {
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 2rem;
+}
+
+.espaçada { letter-spacing: 0.125rem }
+
+.preco {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0 2rem;
+}
+
+.botao {
+  background-color: var(--verde-500);
+  border: none;
+  border-radius: 0.225rem;
+  color: var(--branco);
+  display: block;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.botao:hover {
+  background-color: var(--verde-700);
+  cursor: pointer;
+}
+
+.botao::before {
+  content: url(images/icon-cart.svg);
+  padding-right: 0.5rem;
+  position: relative;
+  top: 0.1rem;
+}
+
+@media only screen and (max-width: 675px) {
+  
+  main {
+    flex-direction: column;
+    --fonte-1: 500 0.75rem/150% "Montserrat";
+    --fonte-2: 700 1.5rem/100% "Fraunces";
+    --fonte-3: 700 0.875rem/150% "Montserrat";
+  }
+  .imagem, .conteudo {
+    height: auto;
+  }
+  img {
+    border-radius: 0.5rem 0.5rem 0 0;
+    display: block;
+  }
+  .conteudo {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
