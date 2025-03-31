@@ -5,11 +5,11 @@
 :root {
   color-scheme: light dark;
 
-  --fonte-1: 500 0.875rem/150% "Montserrat", sans-serif;
-  --fonte-2: 700 2rem/100% "Fraunces", serif;
-  --fonte-3: 700 1rem/150% "Montserrat", sans-serif;
-  --fonte-4: 700 1.5rem/150% "Fraunces", serif;
-  --fonte-5: 500 0.875rem/200% "Montserrat", sans-serif;
+  --fonte-2: 700 2rem/100% "Fraunces", serif; /* 32px */
+  --fonte-4: 700 1.5rem/150% "Fraunces", serif; /* 24px */
+  --fonte-3: 700 1rem/150% "Montserrat", sans-serif; /* 16px */
+  --fonte-1: 500 0.875rem/150% "Montserrat", sans-serif; /* 14px */
+  --fonte-5: 500 0.875rem/200% "Montserrat", sans-serif; /* 14px */
 }
 
 :root[data-theme="light"] {
@@ -63,7 +63,7 @@ html, body {
   min-height: 100%;
 }
 
-.tema {
+.abrir-modal {
   background-color: transparent;
   border: none;
   border-radius: 50%;
@@ -74,12 +74,11 @@ html, body {
   top: 1rem;
 }
 
-.tema:hover {
+.abrir-modal:hover {
   background-color: var(--cor-fundo-1);
   cursor: pointer;
 }
 
-/* Estilo da modal */
 .modal {
   background-color: black;
   background-color: rgba(0, 0, 0, 0.4);
@@ -93,7 +92,6 @@ html, body {
   z-index: 1;
 }
 
-/* Estilo do conteúdo da modal  */
 .conteudo-modal {
   border: 1px solid #888;
   border-radius: 1.25rem;
@@ -109,10 +107,9 @@ html, body {
 
 aside p {
   margin: 0;
-  padding: 0;
-}
+  padding: 0.5rem 0;
+}	
 
-/* Estilo do botão de fechar da modal  */
 .fechar-modal {
   align-self: center;
   font-size: 1.75rem;
@@ -125,7 +122,6 @@ aside p {
   cursor: pointer;
 }
 
-/* Estilos para os botões de mudança de cor da modal interativa */
 form {
   text-align: left;
 }
@@ -159,7 +155,7 @@ img {
   padding: 2rem;
 }
 
-.espaçada { letter-spacing: 0.5rem }
+.espacada { letter-spacing: 0.5rem }
 
 .preco {
   align-items: center;
