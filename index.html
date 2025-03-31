@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light-dark">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -10,7 +10,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
   <title>Frontend Mentor | Product preview card component</title>
 </head>
-<body>
+
+<body class="cor-fundo-1">
+
+  <aside id="minha-modal" class="modal">
+    <div class="conteudo-modal cor-fundo-1">
+      <p class="fonte-4 cor-fonte-3">Choose the theme:</p>
+      <span class="fechar-modal fonte-4 cor-fonte-3">&times;</span>
+      <form>
+        <input type="radio" id="default" name="tema" value="light-dark" checked/>
+        <label for="default" class="fonte-5 cor-fonte-1">System default</label><br/>
+        <input type="radio" id="light" name="tema" value="light"/>
+        <label for="light" class="fonte-5 cor-fonte-1">Light</label><br/>
+        <input type="radio" id="dark" name="tema" value="dark"/>
+        <label for="dark" class="fonte-5 cor-fonte-1">Dark</label><br/>
+      </form>
+    </div>
+  </aside>
+  <button id="abrir-modal" class="tema" title="Theme">&#127763;</button>
+
   <main>
     <div class="imagem">
       <picture>
@@ -18,13 +36,13 @@
         <img alt="" src="images/image-product-mobile.jpg"/>
       </picture>
     </div>
-    <div class="conteudo fundo-branco">
-      <span class="fonte-1 espaçada cor-cinza">Perfume</span>
-      <h1 class="fonte-2 cor-preta">Gabrielle Essence Eau De Parfum</h1>
-      <p class="fonte-1 cor-cinza">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+    <div class="conteudo cor-fundo-2">
+      <span class="fonte-1 espaçada cor-fonte-2">Perfume</span>
+      <h1 class="fonte-2 cor-fonte-1">Gabrielle Essence Eau De Parfum</h1>
+      <p class="fonte-1 cor-fonte-2">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
       <div class="preco">
-        <span class="fonte-2 cor-verde">$149.99</span>
-        <span class="fonte-1 cor-cinza"><del>$169.99</del></span>
+        <span class="fonte-2 cor-fonte-3">$149.99</span>
+        <span class="fonte-1 cor-fonte-2"><del>$169.99</del></span>
       </div>
       <button class="fonte-3 botao">Add to Cart</button>
     </div>
@@ -33,5 +51,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+  <script src="script.js"></script>
 </body>
 </html>
